@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Code Implementation\**" />
+    <EmbeddedResource Remove="Code Implementation\**" />
+    <None Remove="Code Implementation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="XAML Implementation\EvaluateJavaScriptPage.xaml.cs" />
+    <Compile Remove="XAML Implementation\InAppBrowserXaml.xaml.cs" />
+    <Compile Remove="XAML Implementation\LinkToInAppXaml.xaml.cs" />
+    <Compile Remove="XAML Implementation\LoadingLabelXaml.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="XAML Implementation\EvaluateJavaScriptPage.xaml" />
+    <EmbeddedResource Remove="XAML Implementation\InAppBrowserXaml.xaml" />
+    <EmbeddedResource Remove="XAML Implementation\LinkToInAppXaml.xaml" />
+    <EmbeddedResource Remove="XAML Implementation\LoadingLabelXaml.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
+    <PackageReference Include="Xamarin.Forms.Theme.Base" Version="1.0.0.43-pre1" />
+    <PackageReference Include="Xamarin.Forms.Theme.Light" Version="1.0.0.43-pre1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="XAML Implementation\LoadWebViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="XAML Implementation\EvaluateJavaScriptPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="XAML Implementation\InAppBrowserXaml.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="XAML Implementation\LinkToInAppXaml.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="XAML Implementation\LoadingLabelXaml.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="XAML Implementation\LoadWebViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>

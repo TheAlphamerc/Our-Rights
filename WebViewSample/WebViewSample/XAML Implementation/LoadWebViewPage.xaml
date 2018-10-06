@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewSample.XAML_Implementation.LoadWebViewPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--Loading label should not render by default.-->
+            <Label Text="Loading..." IsVisible="false" x:Name="labelLoading" />
+            <WebView x:Name="webView" HeightRequest="1000" WidthRequest="1000" Source="https://ourrights.in" Navigated="webviewNavigated" Navigating="webviewNavigating" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

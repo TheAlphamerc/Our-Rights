@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>WebViewSample.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>WebViewSampleiOS</AssemblyName>
+    <AssemblyName>Our Rights</AssemblyName>
     <NuGetPackageImportStamp>4c32bb5d</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">

@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace WebViewSample.Droid
 {
-    [Activity(Theme = "@style/Splash", Label = "Kefi", MainLauncher = true, NoHistory = true)]
+    [Activity(Theme = "@style/Splash", Label = "Our Rights", MainLauncher = true, NoHistory = true)]
     public class Splash : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
